@@ -1,0 +1,149 @@
+/* --- Basic Reset & Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.site-header {
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #333333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #5b64b1;
+}
+
+.mobile-menu-trigger {
+    display: none;
+    background: none;
+    border: 1px solid #e0e0e0;
+    color: #333333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.mobile-menu-trigger:hover {
+    background-color: #5b64b1;
+    color: white;
+    border-color: #5b64b1;
+}
+
+@media(max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .mobile-menu-trigger {
+        display: block;
+    }
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;           /* Use fixed to overlay the whole screen */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;             /* Full viewport height */
+        background-color: rgba(255,255,255,0.97); /* Slightly see-through */
+        box-shadow: none;
+        z-index: 1000;
+        gap: 0;
+    }
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-link {
+        display: block;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 1.3rem;
+    }
+    .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+}
+
+
+
+.page-container {
+    /* Sets a maximum width for the content for readability on wide screens */
+    max-width: 800px; 
+    
+    /* Centers the container on the page */
+    margin: 0 auto;
+    
+    /* Adds padding to prevent text from touching screen edges */
+    padding: 4rem 2rem; /* 4rem top/bottom, 2rem left/right */
+}
+
+/* --- Heading Styling (h2) --- */
+h2 {
+    /* A brighter, almost-white color to make headings stand out */
+    color: #5496d8; 
+    
+    /* A semi-bold weight for clear hierarchy */
+    font-weight: 600;
+    
+    /* Space below the heading to connect it to its paragraph */
+    margin-bottom: 0.25rem;
+}
+
+.Introduction-block{
+    font-weight: 300;  
+
+    /* Gap between the lines */
+    gap:20px; 
+}
+
+hr{
+    margin-top: 20px;
+}
+
+.time_line{
+    font-weight: 300;  
+
+    /* Gap between the lines */
+    gap:20px;
+}
